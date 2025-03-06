@@ -16,8 +16,8 @@ const About = () => {
                 </p>
 
                 <p className={"mt-7 break-words"}>
-                    In addition to web development, I’m passionate about <span className={"text-violet-300 font-bold custom-underline"}>Machine Learning</span> and
-                    continuously expanding my skills in this area. I've completed learning modules on linear regression and classification, and I'm excited to dive deeper into machine learning models and their applications.
+                    In addition to web development, I&apos;m passionate about <span className={"text-violet-300 font-bold custom-underline"}>Machine Learning</span> and
+                    continuously expanding my skills in this area. I&apos;ve completed learning modules on linear regression and classification, and I&apos;m excited to dive deeper into machine learning models and their applications.
                 </p>
 
                 <p className={"mt-7 break-words"}>Here are a few technologies I&apos;ve been working with recently:</p>

@@ -1,21 +1,16 @@
 'use client'
 import React, {useState} from 'react'
-import {experiences } from "@/utils/utils";
-import InfoBox from "@/components/InfoBox";
+import {experiences} from "@/utils/utils";
 import {Button} from "@/components/ui/button";
 
 const Resume = () => {
     const [activeCategory, setActiveCategory] = useState<string | null>(null);
-    const [activeIndex, setActiveIndex] = useState(null);
 
     const handleClick = (category: string) => {
         setActiveCategory(activeCategory === category ? null : category)
     }
 
-    // @ts-ignore
-    // @ts-ignore
-    // @ts-ignore
-    // @ts-ignore
+
     return (
         <div className={"fade-in lg:ml-56 sm:mt-28 lg:mt-64  text-white flex flex-col space-y-11"}>
             <div className={"flex space-x-5 items-center"}>

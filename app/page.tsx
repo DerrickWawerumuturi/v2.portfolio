@@ -1,7 +1,6 @@
 import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
-import Resume from "@/components/Resume";
 import Contacts from "@/components/Contact";
 import Navbar from "@/components/Navbar";
 

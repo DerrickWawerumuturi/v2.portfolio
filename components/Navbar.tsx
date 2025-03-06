@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useWindowScroll } from "react-use"
 import gsap from 'gsap'
+import Image from "next/image";
 
 const navItems = ["Home", "About", "Projects", "Contacts"]
 
@@ -15,20 +16,20 @@ const Navbar = () => {
     useEffect(() => {
         if (currentScrollY === 0) {
             setIsNavVisible(false)
-            // @ts-ignore
+            // @ts-expect-error current is not null
             navContainerRef.current?.classList.remove('floating-nav')
         } else if (currentScrollY > lastScrollY) {
             setIsNavVisible(false) // Hide navbar on scroll down
-            // @ts-ignore
+            // @ts-expect-error current is not null
             navContainerRef.current?.classList.add("floating-nav")
         } else {
             setIsNavVisible(true) // Show navbar on scroll up
-            // @ts-ignore
+            // @ts-expect-error current is not null
             navContainerRef.current?.classList.remove("floating-nav")
         }
 
         setLastScrollY(currentScrollY)
-    }, [currentScrollY])
+    }, [currentScrollY, lastScrollY])
 
     useEffect(() => {
         if (!navContainerRef.current) return
@@ -47,8 +48,8 @@ const Navbar = () => {
             className="hidden fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6 md:flex justify-center"
         >
             <nav className="flex sm:space-x-11 md:w-[500px] lg:w-[700px] items-center md:space-x-24 lg:space-x-0 lg:justify-between p-4 bg-gray-700 shadow-md rounded-full ">
-                <div className="flex items-center gap-7">
-                    <img src="/images/icon.png" alt="logo" className="w-10" />
+                <div className="flex items-center gap-7 w-10 h-10">
+                    <Image src="/images/icon.png" alt="logo" className="object-contain" fill />
                 </div>
                 <div className="flex h-full items-center">
                     <div className="sm:flex md:gap-7">
