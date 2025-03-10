@@ -16,7 +16,7 @@ const Navbar = () => {
     const [lastScrollY, setLastScrollY] = useState(0)
     const [isNavVisible, setIsNavVisible] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
-
+    const [hasMounted, setHasMounted] = useState(false);
     const {y: currentScrollY} = useWindowScroll()
 
 
@@ -46,6 +46,9 @@ const Navbar = () => {
         })
     }, [isNavVisible])
 
+    useEffect(() => {
+        setHasMounted(true);
+    }, []);
 
     return (
         <div

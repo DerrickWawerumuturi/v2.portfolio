@@ -32,12 +32,12 @@ const ProjectBox = ({
 
     return (
         <div
-            className={"flex flex-col space-y-4 md:flex-row md:space-x-11 items-center my-7 p-5 sm:mx-4 lg:mx-0 hover:border hover:border-gray-800 hover:cursor-pointer lg:max-w-6xl rounded-md transform transition-transform hover:scale-105"}
+            className={"flex flex-col space-y-4 md:flex-row md:space-x-11 items-center my-7 sm:p-1 md:p-5 hover:border hover:border-gray-800 hover:cursor-pointer lg:max-w-6xl rounded-md transform transition-transform hover:scale-105"}
             onClick={() => handleOnClick(website)}
         >
             {/* preview */}
             <div
-                className={"relative w-full h-[20vh] lg:h-[90vh]"}>
+                className={"relative w-[300px] h-[200px] lg:-ml-0 "}>
                 <Image
                     src={cover}
                     alt={title}
