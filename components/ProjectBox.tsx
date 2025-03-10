@@ -36,14 +36,14 @@ const ProjectBox = ({
             onClick={() => handleOnClick(website)}
         >
             {/* preview */}
-            <div className={"relative"}>
+            <div
+                className={"relative w-full h-[20vh] lg:h-[90vh]"}>
                 <Image
                     src={cover}
                     alt={title}
                     style={{ objectFit: "cover" }}
-                    width={500}
-                    height={900}
-                    className={"rounded-md"}
+                    fill
+                    className={"rounded-md absolute"}
                 />
             </div>
 

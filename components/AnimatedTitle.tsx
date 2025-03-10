@@ -1,12 +1,35 @@
 'use client'
-import React, {useRef} from 'react'
+import React, {useRef, useEffect} from 'react'
+import gsap from "gsap"
 
 const AnimatedTitle = ({ title, containerClass}: {title: string, containerClass: string}) => {
 
     const containerRef = useRef<HTMLDivElement>(null); // helps gsap target the correct element for animation
 
 
-    return (
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            const titleAnimation = gsap.timeline({
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "100 bottom",
+                    end: "center bottom",
+                    toggleActions: "play none none reverse"
+                }
+            })
+
+            titleAnimation.to(".animated-word", {
+                opacity: 1,
+                transform: "translate3d(0, 0, 0) rotateY(0deg) rotateX(0deg)",
+                ease: "power1.inOut",
+                stagger: 0.02
+            }, 0)
+        }, containerRef)
+
+        return () => ctx.revert()
+    }, []);
+
+        return (
         <div ref={containerRef} className={`animated-subtitle ${containerClass}`}>
             {title.split("<br />").map((line, index) => (
                 <div key={index} className={"flex-center max-w-full flex-wrap gap-2 md:gap-3"}>
@@ -18,6 +41,7 @@ const AnimatedTitle = ({ title, containerClass}: {title: string, containerClass:
         </div>
     )
 }
+
 export default AnimatedTitle
 
 
