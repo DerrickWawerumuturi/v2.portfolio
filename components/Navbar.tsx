@@ -16,7 +16,7 @@ const Navbar = () => {
     const [lastScrollY, setLastScrollY] = useState(0)
     const [isNavVisible, setIsNavVisible] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
-    const [hasMounted, setHasMounted] = useState(false);
+    const [_, setHasMounted] = useState(false);
     const {y: currentScrollY} = useWindowScroll()
 
 
