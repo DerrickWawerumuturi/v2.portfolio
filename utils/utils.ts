@@ -24,7 +24,7 @@ export const websites = [
         github: "https://github.com/DerrickWawerumuturi/Resumify",
         website: "https://resumify-one.vercel.app/",
         cover: "/images/Resumify.png"
-    }
+    },
 ]
 
 export const experiences = [
@@ -67,7 +67,7 @@ export const experiences = [
                 role: "Developer",
                 link: "https://www.physiomedix.com/",
                 startDate: "September 2024",
-                endDate: "present",
+                endDate: "Feb 2025",
                 skills: [
                     "Lead the development and deployment of a healthcare platform using Next.js, Payload CMS, and PostgreSQL.",
                     "Implement secure authentication and user management with Supabase and Google OAuth.",
@@ -75,6 +75,19 @@ export const experiences = [
                     "Design and maintain a responsive, modern UI with Tailwind CSS, enhancing the user experience with features like dark mode and animations.",
                 ],
             },
+            {
+                name: "Generous Circle",
+                role: "Full Stack Developer",
+                link: "https://app.generouscircle.com/",
+                startDate: "Feb 2025",
+                endDate: "present",
+                skills: [
+                    "Developed a platform that allows users to create and manage their own charitable circles, where they can invite friends and family to join and donate to causes they care about.",
+                    "Implemented a secure and scalable backend using Next.js, Shadcn, and Supabase.",
+                    "Designed and maintained a responsive, modern UI with Tailwind CSS, enhancing the user experience with features like dark mode and animations.",
+                ],
+            },
+            
         ],
     },
 ];
